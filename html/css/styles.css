@@ -1,0 +1,407 @@
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #151D3B;
+    color: #97adff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Estilos do Cabeçalho */
+a:-webkit-any-link {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #151D3B;
+    padding: 20px 40px;
+    border-bottom: 5px solid #D82148;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+   color: #d82148;
+}
+
+#menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #D82148;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+#search-input {
+    padding: 5px 10px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #333;
+    font-size: 1rem;
+    transition: all 0.3s;
+    margin-right: 5px;
+    flex-grow: 2;
+}
+
+#search-button {
+    padding: 5px 10px;
+    background-color: #D82148;
+    color: #E1FFEC;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+#search-button:hover {
+    background-color: #E1FFEC;
+    color: #D82148;
+    border: 1px solid #D82148;
+}
+
+.menu-container {
+    position: relative;
+}
+
+nav#side-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    background-color: #E1FFEC;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+nav#side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#side-menu ul li {
+    padding: 10px;
+}
+
+nav#side-menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #151D3B;
+    border-bottom: 2px solid #D82148;
+    transition: all 0.3s;
+}
+
+nav#side-menu ul li a:hover {
+    background-color: #D82148;
+    color: #E1FFEC;
+}
+
+/* Seção de Banner */
+.banner {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #202A4B;
+}
+
+.banner img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.banner h2 {
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #D82148;
+}
+
+/* Seção de Jogos */
+.games-grid {
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+/* Card de Jogo */
+.game-card {
+    background-color: #E1FFEC;  
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgb(255 0 0 / 48%);
+    width: 420px; 
+    height: auto;
+    margin: 0; 
+}
+
+.games-section h2 {
+    margin-left: 20px; 
+    margin-bottom: 20px; 
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.game-card h3 {
+    margin-bottom: 10px;
+    color: #151D3B;
+}
+
+/* Seção Jogar Agora */
+.play-now-btn {
+    padding: 10px 20px;
+    background-color: #D82148;
+    color: #E1FFEC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.play-now-btn:hover {
+    background-color: #E1FFEC;
+    color: #D82148;
+    border: 1px solid #D82148;
+}
+
+/* Seção ver Mais */
+.view-more {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.view-more-btn {
+    padding: 10px 20px;
+    background-color: #D82148; 
+    color: #E1FFEC; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-more-btn:hover {
+    background-color: #E1FFEC;
+    color: #D82148;
+    border: 1px solid #D82148;
+}
+
+/* Rodapé */
+footer {
+    padding: 30px; 
+    text-align: center;
+    background-color: #151D3B;
+    border-top: 5px solid #D82148;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #d82148;
+}
+
+/* Acessibilidade e Switch */
+
+/* Switch */
+.mode-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 5px 15px;
+    border-top: 1px solid #D82148;
+}
+
+.mode-switcher label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mode-switcher label input {
+    display: none; 
+}
+
+.slider {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: #D82148;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #E1FFEC;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #d82148;
+}
+
+input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+/* Acessibilidade */
+.light-mode {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+.light-mode #menu-toggle {
+    color: #151D3B;
+}
+
+.light-mode nav#side-menu {
+    background-color: #151D3B;
+}
+
+.light-mode nav#side-menu ul li a {
+    color: #E1FFEC;
+    border-bottom: 2px solid #E1FFEC;
+}
+
+.light-mode nav#side-menu ul li a:hover {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+.light-mode nav#side-menu .mode-switcher label {
+    color: #E1FFEC;
+}
+
+.light-mode header {
+    background-color: #E1FFEC;
+}
+
+.light-mode .search-bar #search-input {
+    background-color: #151D3B;
+    color: #E1FFEC;
+}
+
+.light-mode .search-bar #search-button {
+    background-color: #E1FFEC;
+    color: #151D3B;
+    border: 1px solid #151D3B;
+}
+
+.light-mode .banner {
+    background-color: #E1FFEC;
+    color: #151D3B;
+    border: 1px solid #151D3B;
+}
+
+.light-mode footer {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+.light-mode .btn {
+    background-color: #E1FFEC;
+    color: #151D3B;
+    border: 1px solid #E1FFEC;
+}
+
+/* Botão estilizado */
+
+.btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #d82148;
+    transition: .5s ease;
+  }
+  
+  .btn:hover {
+    color: #d82148;
+    transition-delay: .5s;
+  }
+  
+  .btn:hover::before {
+    width: 100%;
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #202a4b;
+    transition: .4s ease;
+    z-index: -1;
+  }
+  
+  .btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+  }

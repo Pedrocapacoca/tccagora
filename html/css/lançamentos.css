@@ -1,0 +1,293 @@
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #151D3B;
+    color: #151D3B;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Estilos do Cabeçalho */
+a:-webkit-any-link {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #151D3B;
+    padding: 20px 40px;
+    border-bottom: 5px solid #D82148;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #d82148;
+}
+
+nav#side-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    background-color: #E1FFEC;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+nav#side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav#side-menu ul li {
+    padding: 10px;
+}
+
+nav#side-menu ul li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #151D3B;
+    transition: background-color 0.3s;
+}
+
+nav#side-menu ul li a.active, 
+nav#side-menu ul li a:hover {
+    background-color: #D82148;
+    color: #E1FFEC;
+}
+
+/* Seção de Lançamentos */
+.launch-section {
+    padding: 40px;
+    background-color: #202A4B;
+}
+
+.launch-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #D82148;
+    margin-bottom: 30px;
+}
+
+.games-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background-color: #E1FFEC;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.game-card h3,
+.game-card p {
+    color: #151D3B;  /* Cores escuras para ambos os modos */
+    margin-bottom: 10px;
+}
+
+.play-now-btn {
+    padding: 10px 20px;
+    background-color: #D82148;
+    color: #E1FFEC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-now-btn:hover {
+    background-color: #E1FFEC;
+    color: #D82148;
+    border: 1px solid #D82148;
+}
+
+/* Rodapé */
+footer {
+    padding: 30px;
+    background-color: #151D3B;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #D82148;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #d82148;
+}
+
+/* Modo Claro */
+body.light-mode {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+header.light-mode {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+nav#side-menu.light-mode {
+    background-color: #151D3B;
+    color: #E1FFEC;
+}
+
+nav#side-menu.light-mode a {
+    color: #E1FFEC;
+}
+
+nav#side-menu.light-mode a:hover {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+.launch-section.light-mode {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+.play-now-btn.light-mode {
+    background-color: #E1FFEC;
+    color: #151D3B;
+    border: 1px solid #D82148;
+}
+
+footer.light-mode {
+    background-color: #E1FFEC;
+    color: #151D3B;
+}
+
+/* Switcher para modo claro/escuro */
+.mode-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-top: 2px solid #D82148;
+    margin-top: 10px;
+}
+
+.mode-switcher label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mode-switcher label input {
+    display: none; 
+}
+
+.slider {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: #D82148;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #E1FFEC;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #d82148;
+}
+
+input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+/* Botão estilizado */
+
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  transition: .5s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #d82148;
+  transition: .5s ease;
+}
+
+.btn:hover {
+  color: #d82148;
+  transition-delay: .5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #202a4b;
+  transition: .4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
